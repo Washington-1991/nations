@@ -1,0 +1,17 @@
+<%= form_with(model: homepage) do |form| %>
+  <% if homepage.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(homepage.errors.count, "error") %> prohibited this homepage from being saved:</h2>
+
+      <ul>
+        <% homepage.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

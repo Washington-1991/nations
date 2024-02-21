@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Homepages</h1>
+
+<div id="homepages">
+  <% @homepages.each do |homepage| %>
+    <%= render homepage %>
+    <p>
+      <%= link_to "Show this homepage", homepage %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New homepage", new_homepage_path %>
